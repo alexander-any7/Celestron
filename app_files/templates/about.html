@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>About</h1>
+    <p>This open source project is an <a href="https://www.altschoolafrica.com/" target="_blank">AltSchool Africa</a> second semester exam project. <p>
+
+        This project was created and is currently maintained by 
+            <a href="https://github.com/Anyaegbunam-Alexander" target="_blank">Alexander</a>, 
+            a student of <a href="https://www.altschoolafrica.com/" target="_blank">AltSchool Africa</a> learning<a href="https://www.python.org/" target="_blank"> Python</a>.</p>
+    </p>
+    <p>You can contribute to this project if you wish to. This is the <a href="#" target="_blank">GitHub</a> link.</p>
+    <p>Thank you for using <a href="{{url_for('index.home')}}" style='color: #333333;'>Celestron</a> <i class="fa-solid fa-star"></i></p>
+    <p><a href="{{url_for('posts.new_post')}}">Share your story</a></p>
+{% endblock content %}
