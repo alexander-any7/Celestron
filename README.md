@@ -30,7 +30,7 @@ pip install -r requirements.txt
 
 ## Environment Configuration
 
-### .env configuration
+### `.env` configuration
 Create a .env file with these configurations:
 ```
 FLASK_ENV=development
