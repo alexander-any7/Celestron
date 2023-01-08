@@ -61,7 +61,6 @@ Entry point: http://127.0.0.1:5000
 ## Note
 - Some \_\_init\_\_.py files might be empty.  
 Those are just to specify that those folders are packages.
-- To send password reset emails, uncomment the codes commented out.
 
 ## Contact
 - Mail: alexanderking.aa@gmail.com
