@@ -25,7 +25,7 @@ Celestron was built as an exam project by [Alexander](https://github.com/Anyaegb
 ## Installation
 Install with pip:
 ```
-$ pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 ## Environment Configuration
