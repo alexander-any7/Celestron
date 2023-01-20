@@ -1,19 +1,11 @@
 # Celestron
 
 ## Aim
-<<<<<<< HEAD
 Using [Python](https://www.python.org/), [Flask](https://flask.palletsprojects.com/en/2.2.x/), and [PostgreSQL](https://www.postgresql.org) to build a simple blogging website.
 
 ## Concept
 Celestron is a simple open-source platform where users can share thoughts, ideas, and stories about any and everything.
 Anyone can read articles from all or specific users, but the user has to create an account and be logged in if the intent is to create or star a post.    
-=======
-Using [Python](https://www.python.org/) and [Flask](https://flask.palletsprojects.com/en/2.2.x/) to build a simple blogging website.
-
-## Concept
-A simple open-source platform where users can share thoughts, ideas, and stories about any and everything.
-Anyone can read articles from all or specific users, but the user has to create an account and be logged in if the intent is to post, update a post, or drop a star.    
->>>>>>> cedce2c9ffb76c33a0c93a7245388eed3f713079
 
 Celestron was built as an exam project by [Alexander](https://github.com/Anyaegbunam-Alexander), a Backend Engineering student of [AltSchool Africa](https://www.altschoolafrica.com/).
 
@@ -33,12 +25,12 @@ Celestron was built as an exam project by [Alexander](https://github.com/Anyaegb
 ## Installation
 Install with pip:
 ```
-$ pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 ## Environment Configuration
 
-### .env configuration
+### `.env` configuration
 Create a .env file with these configurations:
 ```
 FLASK_ENV=development
@@ -54,7 +46,7 @@ SQLALCHEMY_TRACK_MODIFICATIONS=False
 MAIL_USERNAME=<email username>
 MAIL_PASSWORD=<email password>
 ```
-`app.py` is Celestron's entry point.  
+app.py is Celestron's entry point.  
 This file contains just one route pointing to the home page.
 
 ## Run Flask
@@ -67,9 +59,8 @@ In Flask, the default port is 5000
 Entry point: http://127.0.0.1:5000
 
 ## Note
-- Some `\_\_init\_\_.py` files might be empty.  
+- Some \_\_init\_\_.py files might be empty.  
 Those are just to specify that those folders are packages.
-- To send password reset emails, uncomment the codes commented out.
 
 ## Contact
 - Mail: alexanderking.aa@gmail.com
