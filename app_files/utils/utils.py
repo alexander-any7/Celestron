@@ -2,9 +2,8 @@ import os
 import secrets
 from PIL import Image
 from flask import url_for, current_app
-from email.message import EmailMessage
-import ssl
-import smtplib
+from flask_mail import Message
+from app_files import mail
 
 
 def save_picture(form_picture):
@@ -23,19 +22,12 @@ def save_picture(form_picture):
 
 def send_reset_email(user):
     token = user.get_reset_token(user)
-    em_sender = 'noreply@celestron.com'
-    em_receiver = user.email
-    subject = 'Password Reset Request'
-    body = f'To reset your password, visit the following link: {url_for("users.reset_token", token=token, _external=True)}. If you did not make this request, then simply ignore this email and no changes will be made.'
-    email = EmailMessage()
-    email['Subject'] = subject
-    email['From'] = em_sender
-    email['To'] = em_receiver
-    email.set_content(body)
+    msg = Message('Password Reset Request',
+                  sender='noreply@celestron.com',
+                  recipients=[user.email])
+    msg.body = f'''To reset your password, visit the following link:
+{url_for('users.reset_token', token=token, _external=True)}
 
-    context = ssl.create_default_context()
-
-    with smtplib.SMTP_SSL('smtp.att.yahoo.com', context=context) as smtp:
-        smtp.login(os.environ.get('MAIL_USERNAME'), os.environ.get('MAIL_PASSWORD'))
-        smtp.sendmail(from_addr=em_sender, to_addrs=em_receiver, msg=email.as_string())
-
+If you did not make this request then simply ignore this email and no changes will be made.
+'''
+    mail.send(msg)
